@@ -6,7 +6,7 @@ require 'watir'
 
 start_script = Time.now
 
-browser = Watir::Browser.new
+browser = Watir::Browser.new headless: false
 browser.goto('https://www.olx.ua/uk/list/q-nikon-D3100-kit/')
 
 if browser.button(data_testid: 'dismiss-cookies-banner').present?
