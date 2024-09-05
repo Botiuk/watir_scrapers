@@ -21,6 +21,8 @@ loop do
     end
   end
 
+  break unless browser.div(data_qaid: 'pagination').present?
+
   if browser.a(data_qaid: 'next_page').present?
     browser.a(data_qaid: 'next_page').click
   else
