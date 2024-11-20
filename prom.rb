@@ -12,7 +12,7 @@ browser.goto('https://prom.ua/ua/search?search_term=Nikon%20D3100&category=1909'
 products = []
 
 loop do
-  parsed_products = browser.div(data_qaid: 'product_gallery').divs(class: 'l-GwW js-productad')
+  parsed_products = browser.div(data_qaid: 'product_gallery').divs(class: 'l-GwW')
 
   parsed_products.each do |pp|
     if pp.button(data_qaid: 'buy-button').present?

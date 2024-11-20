@@ -19,7 +19,7 @@ loop do
   parsed_products = browser.divs(class: 'css-qfzx1y')
 
   parsed_products.each do |pp|
-    products << { name: pp.h6.text, price: pp.p.text.tr(' ', '').to_i }
+    products << { name: pp.h4.text, price: pp.p.text.tr(' ', '').to_i }
   end
 
   break unless browser.a(data_testid: 'pagination-forward').present?
